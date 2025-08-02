@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Flores Amarillas y Corazones</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      background: #22223b;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .boton-index {
+      margin-top: 40px;
+      padding: 15px 40px;
+      background: linear-gradient(90deg, #ffe066 0%, #f9c74f 100%);
+      color: #22223b;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .boton-index:hover {
+      background: linear-gradient(90deg, #f9c74f 0%, #ffe066 100%);
+      transform: scale(1.05);
+    }
+    /* Puedes agregar aquí más estilos personalizados para flores */
+  </style>
+</head>
+<body>
+  <!-- ...existing code... -->
+
+<div id="emoji-bubbles"></div>
+<script>
+const emojis = ['🌻','💛','💐','🌼','💖','🌸','💚','🌺','💙','🌷','💜','💝'];
+const bubbleCount = 18;
+
+function randomBetween(a, b) {
+  return Math.random() * (b - a) + a;
+}
+
+for(let i=0; i<bubbleCount; i++) {
+  const emoji = emojis[Math.floor(Math.random()*emojis.length)];
+  const bubble = document.createElement('span');
+  bubble.textContent = emoji;
+  bubble.className = 'emoji-bubble';
+  bubble.style.left = `${randomBetween(5, 95)}vw`;
+  bubble.style.animationDelay = `${randomBetween(0, 3)}s`;
+  bubble.style.fontSize = `${randomBetween(2, 3.5)}rem`;
+  document.getElementById('emoji-bubbles').appendChild(bubble);
+}
+</script>
+<style>
+#emoji-bubbles {
+  pointer-events: none;
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  z-index: 10;
+}
+.emoji-bubble {
+  position: absolute;
+  bottom: -3rem;
+  opacity: 0;
+  animation: bubbleUp 6s linear infinite;
+  filter: drop-shadow(0 2px 8px #0002);
+  user-select: none;
+  will-change: transform, opacity;
+}
+@keyframes bubbleUp {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-10vh) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(-80vh) scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateY(-100vh) scale(0.8);
+  }
+}
+</style>
+<!-- ...existing code... -->
+  <div class="container">
+    <!-- FLORES AMARILLAS -->
+    <div class="flowers">
+      <div class="flower flower--1">
+        <div class="flower__leafs flower__leafs--1">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+      <div class="flower flower--2">
+        <div class="flower__leafs flower__leafs--2">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+      <div class="flower flower--3">
+        <div class="flower__leafs flower__leafs--3">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+      </div>
+    </div>
+    <!-- BOTÓN PARA IR AL INDEX -->
+    <button class="boton-index" onclick="window.location.href='index1.html'">
+      seguro que quieres entrar???? 
+    </button>
+  </div>
+  
+</body>
+</html>
